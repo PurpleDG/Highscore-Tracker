@@ -1,7 +1,18 @@
 # Evan McCabe, Asher Wangia, Connor Pavicic, Gavin Pierce Highscore Tracker
 
+
+#██████╗  ██████╗ ███╗   ██╗████████╗    ██████╗ ███████╗██╗     ███████╗████████╗███████╗
+#██╔══██╗██╔═══██╗████╗  ██║╚══██╔══╝    ██╔══██╗██╔════╝██║     ██╔════╝╚══██╔══╝██╔════╝
+#██║  ██║██║   ██║██╔██╗ ██║   ██║       ██║  ██║█████╗  ██║     █████╗     ██║   █████╗  
+#██║  ██║██║   ██║██║╚██╗██║   ██║       ██║  ██║██╔══╝  ██║     ██╔══╝     ██║   ██╔══╝  
+#██████╔╝╚██████╔╝██║ ╚████║   ██║       ██████╔╝███████╗███████╗███████╗   ██║   ███████╗
+#╚═════╝  ╚═════╝ ╚═╝  ╚═══╝   ╚═╝       ╚═════╝ ╚══════╝╚══════╝╚══════╝   ╚═╝   ╚══════╝
+                                                                                                                                                                                                       
+likeToPlay = "yes"                                                                                                                                          
+
 import random
 
+#tic tac toe function to for game one
 def tic_tac_toe():
     gameBoard = [[" " for _ in range(3)] for _ in range(3)]
     def printBoard():
@@ -80,13 +91,35 @@ def tic_tac_toe():
                 print("It's a tie!")
                 gameOver = True
 
-    else:
-        print("OK, bye!")
+def num_gussing_game():
+    print("welcom to num buessing game terminal.")
+    rand_num = random.randint(1, 1000000)
+    user_num = int("what is the number that you want? ")
+    
+    print(user_num)
+    print(rand_num)
 
-    def game():
+    #if user_num > rand_num: 
+
+def game():
+    while "3":
         game_to_play=input("""what game do you want to play?
-                        1. tic tak toe.
-                        2. number guessing game.
-                        chose either one or two.""")
+                    1. tic tak toe.
+                    2. number guessing game.
+                    3. Home screen
+                    (example choise 1. Use intager number).
+                    """)
+        
         if game_to_play == "1":
             tic_tac_toe()
+        elif game_to_play == "2":
+            num_gussing_game()
+        else:
+            print("give valid varible")
+
+#    elif game_to_play == "3":
+#        break
+
+#        back to main
+
+game()
