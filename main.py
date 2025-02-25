@@ -10,6 +10,8 @@
                                                                                                                                                                                                        
 likeToPlay = "yes"                                                                                                                                          
 
+attempt_num = 5
+
 import random
 
 #tic tac toe function to for game one
@@ -94,10 +96,18 @@ def tic_tac_toe():
 def num_gussing_game():
     print("welcom to num buessing game terminal.")
     rand_num = random.randint(1, 1000000)
-    user_num = int("what is the number that you want? ")
-    
-    print(user_num)
-    print(rand_num)
+    print("you will have 5 apempts to guess the number it is between 1 and 1,000,000.")
+
+    while attempt_num > 0:
+        user_num = input("what is the number that you want? ")
+
+        user_num=int(user_num)
+        if user_num > rand_num:
+            print("so... umm... you number is a little high.")
+        elif rand_num > user_num:
+            print("""yooooooooooooooooooooooooooooooo, your number is toooooo small.""")
+        elif rand_num == user_num:
+            print("""you got it right! you realize the odds of the right? is is just as likly as you getting the bible number. there is a number inbetween 1 and 1,000,000 that will indeed print the bible.""")
 
     #if user_num > rand_num: 
 
@@ -114,12 +124,9 @@ def game():
             tic_tac_toe()
         elif game_to_play == "2":
             num_gussing_game()
+        elif game_to_play == "3":
+            break
         else:
             print("give valid varible")
-
-#    elif game_to_play == "3":
-#        break
-
-#        back to main
 
 game()
