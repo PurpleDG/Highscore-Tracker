@@ -1,4 +1,6 @@
-def main():
+#Connor Pavicic, main_function
+
+def main(): #Main function
 	while True:
 		choice = input("""Which one do you want to do?:
 1: Play a game
