@@ -10,6 +10,8 @@
 
 import tic_tac_toe
 
+import random
+
 likeToPlay = "yes"                                                                                                                                          
 
 attempt_num = 5
@@ -42,11 +44,10 @@ def num_gussing_game():
 def game():
     while "3":
         game_to_play=input("""what game do you want to play?
-                    1. tic tak toe.
-                    2. number guessing game.
-                    3. Home screen
-                    (example choise 1. Use intager number).
-                    """)
+1. tic tak toe.
+2. number guessing game.
+3. Home screen
+""")
         
         if game_to_play == "1":
             tic_tac_toe()
