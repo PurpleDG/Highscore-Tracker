@@ -6,7 +6,7 @@ def main(): #Main function
 	while True:
 		
         #Ask the user if they want to play a game, display high scores, or exit the program:
-		choice = input("""Which one do you want to do?:
+		choice = input("""\nWhich one do you want to do?:
 1: Play a game
 2: Display high scores
 3: Exit the program
@@ -15,21 +15,21 @@ def main(): #Main function
 
 		if choice == '1':
 			# Run Gavin's functions
-			print('Run Gavins function.')
+			print('\nRun Gavins function.')
 			pass
 		
         #If the user chose to display high scores:
 		elif choice == '2':
 			# Run Asher's function
-			print('Run Ashers function')
+			print('\nRun Ashers function')
 			pass
 		
         #If the user chose to exit the program:
 		elif choice == '3':
-			print('Thanks for playing!')
+			print('\nThanks for playing!')
 			break
 		else:
-			print('Incorrect option, try again.')
+			print('\nIncorrect option, try again.')
 			continue
 
 main()
