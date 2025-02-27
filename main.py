@@ -120,7 +120,7 @@ def setHighScore(game, name, score):
                     
 #Asher's function
 # Function to Display High Scores:
-def display_highscore():
+def displayHighScores():
     
 	#Asks the user for what game they want to display highscores of
     display_game = input("""
@@ -152,3 +152,46 @@ Which game do you want To display the high scores of?
         
 		#Tell the user they chose an invalid option:
         print("\nNot An Option!")
+        
+#Connor Pavicic, main function
+#Main function to run the program:
+def main():
+     
+	 #Introduce the program to the user:
+	print('\nThis is a program where you can play some fun games and save your high scores. Have fun!')
+	
+	#Keep the program running in a loop:
+	while True:
+		
+        #Ask the user if they want to play a game, display high scores, or exit the program:
+		choice = input("""\nWhat would you like to do?:
+1: Play a game
+2: Display high scores
+3: Exit the program
+""")
+
+		#If the user chooses to play a game:
+		if choice == '1':
+               
+			#Run the play game function:
+			print('Run Gavins function.')
+		
+        #If the user chooses to display high scores:
+		elif choice == '2':
+			
+			#Run the display highscores function:
+			displayHighScores()
+		
+        #If the user chooses to exit the program:
+		elif choice == '3':
+			print('\nThanks for playing!\n')
+			exit()
+               
+		#If the user does not choose a valid option:
+		else:
+               
+			#Tell the user that they did not choose a valid option:
+			print('Incorrect option, try again.')
+
+#Start the program:
+main()
