@@ -168,13 +168,14 @@ def main():
 1: Play a game
 2: Display high scores
 3: Exit the program
-""")
+
+(1, 2, or 3): """)
 
 		#If the user chooses to play a game:
 		if choice == '1':
                
 			#Run the play game function:
-			print('Run Gavins function.')
+			print('\nRun Gavins function.')
 		
         #If the user chooses to display high scores:
 		elif choice == '2':
@@ -191,7 +192,7 @@ def main():
 		else:
                
 			#Tell the user that they did not choose a valid option:
-			print('Incorrect option, try again.')
+			print('\nIncorrect option, try again.')
 
 #Start the program:
 main()
