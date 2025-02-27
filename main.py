@@ -30,6 +30,7 @@ NGGhighScore3 = {
     "score": 0
 }
 
+#Evan's Function
 #Set High Score Function:
 def setHighScore(game, name, score):
 
@@ -116,3 +117,38 @@ def setHighScore(game, name, score):
                     #Transfer the value of the current score to high score 3:
                     NGGhighScore3["name"] = name
                     NGGhighScore3["score"] = score
+                    
+#Asher's function
+# Function to Display High Scores:
+def display_highscore():
+    
+	#Asks the user for what game they want to display highscores of
+    display_game = input("""
+Which game do you want To display the high scores of?
+1. Number Guessing Game
+2. Tic-Tac-Toe
+""")
+
+	#If the user chooses to display the highscores of the number guessing game:
+    if display_game == "1":
+        
+		#Display the number guessing game highscores:
+        print("\nNumber Guessing Game Highscores:")
+        print("1. ",NGGhighScore1["name"],": ",NGGhighScore1["score"])
+        print("2. ",NGGhighScore2["name"],": ",NGGhighScore2["score"])
+        print("3. ",NGGhighScore3["name"],": ",NGGhighScore3["score"])
+        
+	#If the user chooses to display the highscores of tic-tac-toe:
+    elif display_game == "2":
+        
+		#Display the tic-tac-toe highscores:
+        print("\nTic-Tac-Toe Highscores:")
+        print("1. ",TTThighScore1["name"],": ",TTThighScore1["score"])
+        print("2. ",TTThighScore2["name"],": ",TTThighScore2["score"])
+        print("3. ",TTThighScore3["name"],": ",TTThighScore3["score"])
+
+	#If the user doesn't choose a valid option:    
+    else:
+        
+		#Tell the user they chose an invalid option:
+        print("\nNot An Option!")
