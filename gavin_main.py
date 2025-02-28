@@ -1,5 +1,8 @@
 # Evan McCabe, Asher Wangia, Connor Pavicic, Gavin Pierce Highscore Tracker
 
+from tic_tac_toe import tic_tac_toe
+from num_guesser import num_gussing_game
+
 #main function for the game
 def game():
     while "3":
