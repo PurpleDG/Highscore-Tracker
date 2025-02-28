@@ -165,8 +165,6 @@ Which game do you want To display the high scores of?
 
 likeToPlay = "yes"                                                                                                                                          
 
-attempt_num = 5
-
 import random
 
 tic_tac_toe_highscore=0
@@ -524,6 +522,7 @@ def tic_tac_toe():
 
 #this is the number guessing game
 def num_gussing_game():
+    attempt_num = 5
     print("welcom to num buessing game terminal.")
     rand_num = random.randint(1, 1000000)
     print("you will have 5 apempts to guess the number it is between 1 and 1,000,000.")
