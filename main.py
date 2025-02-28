@@ -163,10 +163,6 @@ Which game do you want To display the high scores of?
 #██████╔╝╚██████╔╝██║ ╚████║   ██║       ██████╔╝███████╗███████╗███████╗   ██║   ███████╗
 #╚═════╝  ╚═════╝ ╚═╝  ╚═══╝   ╚═╝       ╚═════╝ ╚══════╝╚══════╝╚══════╝   ╚═╝   ╚══════╝
 
-import random
-
-
-
 likeToPlay = "yes"                                                                                                                                          
 
 attempt_num = 5
@@ -529,7 +525,7 @@ def tic_tac_toe():
 #this is the number guessing game
 def num_gussing_game():
     print("welcom to num buessing game terminal.")
-    rand_num = random.random(1, 1000000)
+    rand_num = random.randint(1, 1000000)
     print("you will have 5 apempts to guess the number it is between 1 and 1,000,000.")
         #adds loop to make it so that the user can only try a certain amount of times
     while attempt_num > 0:
@@ -556,7 +552,7 @@ def num_gussing_game():
             attempt_num -= 1
             place_holder_score=1000000-user_num
             num_gussing_score=1000000-place_holder_score
-        
+
     #if user_num > rand_num: 
 #main function for the game
 def game():
