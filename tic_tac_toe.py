@@ -1,8 +1,8 @@
 import random
 
-tic_tac_toe_highscore=0
-
 def tic_tac_toe():
+    tic_tac_toe_highscore=0
+    game = 'Tic-Tac-Toe'
     rows = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
     choice = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
 
