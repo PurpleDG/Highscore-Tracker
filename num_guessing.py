@@ -1,40 +1,39 @@
 import random
 
-
-
-#this is the number guessing game
-def num_gussing_game():
-    game = 'Tic-Tac-Toe'
+# This is the number guessing game
+def num_guessing_game():
+    game = "Number Guessing Game"
     attempt_num = 5
-    print("welcom to num buessing game terminal.")
+    print("\nWelcome to the Number Guessing Game!")
+
+    # Generate a random number between 1 and 1,000,000
     rand_num = random.randint(1, 1000000)
-    print("you will have 5 apempts to guess the number it is between 1 and 1,000,000.")
-        #adds loop to make it so that the user can only try a certain amount of times
+    print("You have 5 attempts to guess the number. It is between 1 and 1,000,000.")
+
+    # Loop until the user runs out of attempts
     while attempt_num > 0:
         try:
-            user_num = int(input("what is the number that you want? "))
+            user_num = int(input("\nEnter your guess: "))
 
-            # tells user that their number is to large
-            if rand_num > user_num:
-                print("""yooooooooooooooooooooooooooooooo, your number is toooooo small.""")
-                attempt_num -= 1
-                place_holder_score=1000000-user_num
-                num_gussing_score=1000000-place_holder_score
-
-
-            #tells user that they got it right and that the odds of it were next to impossible
-            elif rand_num == user_num:
-                print("""you got it right! you realize the odds of the right? is is just as likly as you getting the Ucas Student Handbook number. there is a number inbetween 1 and 1,000,000 that will indeed print the .""")
-                attempt_num -= 1
-                place_holder_score=1000000-user_num
-                num_gussing_score=1000000-place_holder_score
-
-            #tells user that their number is to high.
+            # If the guess is too low
+            if user_num < rand_num:
+                print("Your guess is too low. Try again!")
+            
+            # If the guess is too high
             elif user_num > rand_num:
-                print("so... umm... you number is a little high.")
-                attempt_num -= 1
-                place_holder_score=1000000-user_num
-                num_gussing_score=1000000-place_holder_score
+                print("Your guess is too high. Try again!")
 
+            # If the user guesses correctly
+            else:
+                print("\nYou got it right! Do you realize how lucky that is? The odds are 1 in 1,000,000!")
+                break  # Exit the loop if guessed correctly
+
+            # Update attempts and calculate score
+            attempt_num -= 1
+            num_guessing_score = 1000000 - abs(rand_num - user_num)
+        
         except ValueError:
-            print('Incorrect input, try again.')
+            print("Invalid input. Please enter a number.")
+
+    print("\nGame Over!")
+    return game
